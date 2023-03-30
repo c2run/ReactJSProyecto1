@@ -4,6 +4,18 @@ import Saludar from './components/Saludar';
 
 
 function App() {
+  /*
+  const userName = "José Cerda";
+  const edad = 34;
+  //pasando variables a los props
+*/
+  //pasando objeto con todos los datos
+  const user = {
+    nombre: "Jose Manuel",
+    edad: 34,
+    color: "Rojo"
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +23,7 @@ function App() {
         <p>
           <code>Hola José</code> App de React.
         </p>
-        <Saludar name="José Manuel" anios="33" />
-        <Saludar name="Karen" anios="31" />
+        <Saludar userInfo={user} />
       </header>
     </div>
   );
