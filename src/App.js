@@ -17,8 +17,9 @@ function App() {
     color: "Rojo"
   };
 
-  const saludarFN = name => {
-    alert("Hola "+name);
+  const saludarFN = (nombre, edad) => {
+    //Template strings para añadir variables al texto sin tener que concatenar
+    console.log(`Hola ${nombre}, tiene ${edad} años.`);
   }
 
   return (
