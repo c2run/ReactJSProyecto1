@@ -3,6 +3,7 @@ import './App.css';
 import Saludar from './components/Saludar';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
+import {ReactComponent as ReactIcon} from "./assets/react.svg";
 
 function App() {
   /*
@@ -31,6 +32,7 @@ function App() {
         <h1>React Bootstrap</h1>
         <Saludar userInfo={user} saludarFN={saludarFN} />
         <Button variant="success" size="lg" block>Large button</Button>{''}
+        <ReactIcon></ReactIcon>
         <>
         <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
