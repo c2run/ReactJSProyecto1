@@ -27,6 +27,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Saludar userInfo={user} saludarFN={saludarFN} />
+        
       </header>
     </div>
   );
