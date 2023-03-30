@@ -4,13 +4,20 @@ import Saludar from './components/Saludar';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import {ReactComponent as ReactIcon} from "./assets/react.svg";
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 function App() {
 
 
   //Hook useState para asignar y cambiar valor a un estado
   const [estadoAuto, AsignarEstadoAuto] = useState(false);
+
+  //Hook de efecto. se ejecuta luego de renderizar.
+  const [contar, setContar] = useState(0);
+
+  useEffect(() => {
+
+  }, [contar]);
 
   /*
   const userName = "José Cerda";
@@ -32,7 +39,11 @@ function App() {
   }
 
     const encenderApagar = () =>{
+      // -> ! manda lo contrario a lo que actualmente es. para poder cambiar el estado.
       AsignarEstadoAuto(!estadoAuto);
+      //En caso de pasar la función a otro componente utilizar prevValue para cambiar el último valor.
+      //AsignarEstadoAuto(prevValue => !prevValue);
+      setContar(contar+1);
     }
 
   return (
@@ -42,8 +53,8 @@ function App() {
         <h1>React Bootstrap</h1>
         <Saludar userInfo={user} saludarFN={saludarFN} />
         <Button variant="success" size="lg" block>Large button</Button>{''}
-
           <h3> El auto está: {estadoAuto ? "Encendido" : "Apagado"} </h3>
+          <h4>Clicks {contar}</h4>
           <Button variant='success' onClick={encenderApagar}>Encender/Apagar</Button>
         <ReactIcon></ReactIcon>
         <>
