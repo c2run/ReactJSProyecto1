@@ -9,6 +9,7 @@ function App() {
   const edad = 34;
   //pasando variables a los props
 */
+
   //pasando objeto con todos los datos
   const user = {
     nombre: "Jose Manuel",
@@ -16,14 +17,15 @@ function App() {
     color: "Rojo"
   };
 
+  const saludarFN = name => {
+    alert("Hola "+name);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>Hola José</code> App de React.
-        </p>
-        <Saludar userInfo={user} />
+        <Saludar userInfo={user} saludarFN={saludarFN} />
       </header>
     </div>
   );
