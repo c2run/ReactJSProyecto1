@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Saludar from './components/Saludar';
-
+import Button from 'react-bootstrap/Button';
+import Accordion from 'react-bootstrap/Accordion';
 
 function App() {
   /*
@@ -9,6 +10,7 @@ function App() {
   const edad = 34;
   //pasando variables a los props
 */
+
 
   //pasando objeto con todos los datos
   const user = {
@@ -26,8 +28,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>React Bootstrap</h1>
         <Saludar userInfo={user} saludarFN={saludarFN} />
-        
+        <Button variant="success" size="lg" block>Large button</Button>{''}
+        <>
+        <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+        <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Body>
+         Objeto Acordión
+        </Accordion.Body>
+        </Accordion.Item>
+        </Accordion>
+        </>
       </header>
     </div>
   );
